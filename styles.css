@@ -1,0 +1,169 @@
+*{
+    background-color: #e5e5e5;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+}
+
+.logoAlura{
+    margin-left: 10px;
+    padding-top: 10px;
+    width: 10%;
+}
+
+main{
+    display: flex;
+    margin-bottom: 50px;
+    margin-left: 80px;
+}
+
+.textoRecebido{
+    border: none;
+    color: #0A3871;
+    margin-top: 90px;
+    text-transform: lowercase;
+}
+
+::placeholder{ color: #0A3871}
+    .textoRecebido:focus{
+        outline: none;
+    }
+
+.secaoResultado__textoDevolvido{
+    background-color: white;
+    background-image: url(./assets/boneco.png);
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 24px;
+    color: #0A3871;
+    margin-left: 98px;
+    margin-top: 20px;
+    padding-left: 20px;
+    position: fixed;
+    position: relative; /* Define um contexto de posicionamento para elementos filhos com position absolute */
+}
+.secaoResultado__textoDevolvido:focus{
+    outline: none;
+}
+
+.botoes{
+    display: flex;
+    margin-top: 18px;
+    justify-content: space-around;
+    gap: 24px;
+}
+
+/* estilizar botoes separados, texto de informacao */
+.botoes__botaoEncriptar{
+    background-color: #0A3871;
+    border-radius: 24px;
+    border: none;
+    font-family: 'Inter', sans-serif;
+    color:white;
+    font-size: 16px;
+    width: 328px;
+    cursor: pointer;
+}
+
+.botoes__botaoDesencriptar{
+    background-color: white;
+    border-radius: 24px;
+    border: 1px;
+    border-color: #0A3871;
+    font-family: 'Inter', sans-serif;
+    color:#0A3871;
+    font-size: 16px;
+    width: 328px;
+    cursor: pointer;
+}
+
+.secaoResultado__botaoCopiar{
+    display: none;
+    position: absolute; /* Posiciona o botão em relação ao seu contêiner pai (secaoResultado) */
+    bottom: 155px; /* Ajuste conforme necessário */
+    right: 138px; /* Ajuste conforme necessário */
+    z-index: 10; /* Garante que o botão fique acima do textarea */
+    background-color: white;
+    border-radius: 24px;
+    border: 1px solid;
+    border-color: #0A3871;
+    font-family: 'Inter', sans-serif;
+    color:#0A3871;
+    font-size: 16px;
+    width: 328px;
+    cursor: pointer;
+}
+
+
+.informacao{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.sinalExclamacao{
+    padding: 2%;
+    height: 16px;
+    width: 16px;
+}
+.informacao__texto{
+    font-size: 16px;
+}
+
+/* ALTERANDO PARA OUTROS ESTILOS DE TELA */
+
+/* CELULAR:  */
+@media (max-width: 375px){
+    .logoAlura{
+        margin-left:2%;
+        padding-top: 2%;
+        width: 20%;
+    }
+
+    main{
+        flex-direction: column;
+        margin-bottom: 2%;
+        margin-left: 2%;
+    }
+
+    .textoRecebido{
+        padding: 5% 0%;
+        margin: auto;
+    }
+
+    .botoes{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .botoes__botaoEncriptar{
+        width: 200px;
+    }
+
+    .botoes__botaoDesencriptar{
+        width: 200px;
+    }
+
+    /* .secaoResultado{
+        margin: auto;
+        padding: auto;
+    } */
+
+    .secaoResultado__textoDevolvido{
+        background-image: none;
+        margin: 10px auto;
+        padding: auto;
+        width: 300px;  /* Define a largura */
+        height: 150px;
+    }
+
+    .secaoResultado__botaoCopiar{
+        display: none;
+        bottom: 1px; /* Ajuste conforme necessário */
+        right: 85px; /*Ajuste conforme necessário*/
+        width: 200px;
+    }
+
+}

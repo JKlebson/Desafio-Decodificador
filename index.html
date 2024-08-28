@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decodificador</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+
+<body>
+    <header>
+        <img class="logoAlura" src="./assets/icone_alura.png" alt="Logo da Alura">
+    </header>    
+
+    <main>
+        <section> 
+            <!-- receber texxto do usuário -->
+            <textarea class="textoRecebido" rows="4" cols="41" placeholder="Digite seu texto"></textarea>
+
+            <!-- MENSAGEM INFORMATIVA -->
+            <div class="informacao">
+                <img class="informacao__sinalExclamacao" src="./assets/sinal_exclamacao.png" alt="Sinal de alerta">
+                <p class="informacao__texto">Apenas letras minúscuas e sem acento</p>
+            </div>
+            
+            <!-- botões -->
+            <div class="botoes">
+                <button class="botoes__botaoEncriptar" onclick = "btn_encriptar()">Criptografar</button>
+                <button class="botoes__botaoDesencriptar" onclick = "btn_desencriptar()">Descriptografar</button>
+            </div>
+            
+        </section>
+
+        <section class="secaoResultado">
+            <!-- Devolvendo Texto para o usuário -->
+            <textarea class="secaoResultado__textoDevolvido" rows="10" cols="20"></textarea>
+            <button class="secaoResultado__botaoCopiar" onclick = "copiarTexto()">COPIAR</button>
+        </section>
+    </main>
+    
+    <!-- EXTRA - RODAPÉ -->
+    <footer></footer>
+
+    <!-- Linkando o aqrivo Java Script -->
+    <script src="app.js" defer></script> 
+</body>
+
+
+</html>
